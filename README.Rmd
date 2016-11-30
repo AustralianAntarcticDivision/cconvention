@@ -35,6 +35,7 @@ devtools::install_github("mdsumner/cconvention")
 This is a basic example which loads an in-built data set. 
 
 ```{r example}
+library(cconvention)
 subarea <- division()
 
 library(sp)
