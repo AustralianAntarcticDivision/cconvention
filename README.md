@@ -17,6 +17,18 @@ You can install cconvention from github with:
 devtools::install_github("mdsumner/cconvention")
 ```
 
+Work in progress
+----------------
+
+This project aims to collate the agreed boundaries define by CCAMLR.
+
+-   The `division` functions shows a manual way of doing this, encoding the path steps taken to define boundary lines
+-   the `parse-text` vignette uses `Combin8R` to begin building an automated tool for extracting the information from the text
+
+Either method results in a 1D topology, the connected boundaries in raw geographic space that need to be "baked-in", both by introducing intermediate vertices to carry curvature and to integrate implicit physical boundaries specied in the text, such as "coastline" or "ice shelf".
+
+After baking, we can provide easy to use map structures for analytical work. The main advantage to using this process is to avoid artefacts introduced by inexact geo-spatial operations.
+
 Example
 -------
 
