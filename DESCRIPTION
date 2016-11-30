@@ -9,7 +9,7 @@ Description: Provides topologically sound spatial structures for the CCAMLR conv
   precise terms. This package provides means of capturing that information and providing spatial map 
   structures with it. 
 Depends:
-    R (>= 3.3.2)
+    R (>= 3.3.0)
 Imports: geosphere, raster, sp
 Suggests: 
     covr, 
