@@ -1,0 +1,46 @@
+---
+output: github_document
+---
+
+[![Travis-CI Build Status](https://travis-ci.org/mdsumner/cconvention.svg?branch=master)](https://travis-ci.org/mdsumner/cconvention)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/mdsumner/cconvention?branch=master&svg=true)](https://ci.appveyor.com/project/mdsumner/cconvention)
+[![Coverage Status](https://img.shields.io/codecov/c/github/mdsumner/cconvention/master.svg)](https://codecov.io/github/mdsumner/cconvention?branch=master)
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# cconvention
+
+The goal of cconvention is to provide access to the CCAMLR convention in spatial form, from scratch. 
+ 
+
+## Installation
+
+You can install cconvention from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("mdsumner/cconvention")
+```
+
+## Example
+
+This is a basic example which loads an in-built data set. 
+
+```{r example}
+subarea <- division()
+
+library(sp)
+library(rgdal)
+p <- spTransform(subarea, "+proj=laea +lon_0=147 +lat_0=-90 +ellps=WGS84 +no_defs")
+plot(p, col = "darkgrey")
+
+
+```

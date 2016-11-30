@@ -1,6 +1,8 @@
 # ---- division-b ----
 
 
+
+
 ## ASD database 
 ## here we simply define a matrix for every named ASD that we might want
 
@@ -65,11 +67,14 @@
 #' @return SpatialPolygonsDataFrame
 #' @export
 #' @examples \dontrun{
-#' cm <- readOGR(file.path(dp, "data", "add_ver6"), "cst01_polygon")
-#'cmu <- gUnionCascaded(cm)
-#' subarea <- division(asdunits, intsct = cml)
+#' #cm <- readOGR(file.path(dp, "data", "add_ver6"), "cst01_polygon")
+#' #cmu <- gUnionCascaded(cm)
+#' library(aceecostats)
+#' subarea <- division(intsct = aes_region)
 #' }
-division <- function(name, intsct = NULL) {
+#' @importFrom sp CRS Polygon Polygons SpatialPolygons SpatialPolygonsDataFrame spTransform
+#' @importFrom raster cover projection
+division <- function(name = "58.4.1", intsct = NULL) {
   llproj <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs +towgs84=0,0,0"
   listofasd <- vector("list", length(name))
   for (i in seq_along(name)) {
@@ -89,7 +94,6 @@ division <- function(name, intsct = NULL) {
   } else {
     cv <- dv
   }
-  #plot(subset(cv, !is.na(name)))
-  return(cv)
+ cv
 }
 
