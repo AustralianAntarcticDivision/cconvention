@@ -2,7 +2,7 @@
 #'
 #' This function takes a matrix of coordinates in longlat that define a pathy, and returns a denser matrix with more vertices based on a minimum allowed distance. 
 #' 
-#' The function assumes each segment is a great circle, on the Vincenty ellipsoid \code{\link[raster]{distVincentyEllipsoid}}. 
+#' The function assumes each segment is a great circle, on the Vincenty ellipsoid \code{\link[geosphere]{distVincentyEllipsoid}}. 
 #' @param x matrix of coordinates, long/lat
 #' @param minm default distance in metres on a great cicle
 #'
