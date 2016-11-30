@@ -16,6 +16,7 @@ Suggests:
     Combin8R,
     knitr,
     maptools,
+    rgdal,
     rgeos,
     rmarkdown,
     stringi,
