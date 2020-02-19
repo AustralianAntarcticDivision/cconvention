@@ -25,4 +25,3 @@ library(aceecostats)
 subarea <- division(intsct = aes_region)
 }
 }
-

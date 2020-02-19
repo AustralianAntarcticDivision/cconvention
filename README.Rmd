@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 [![Travis-CI Build Status](https://travis-ci.org/mdsumner/cconvention.svg?branch=master)](https://travis-ci.org/mdsumner/cconvention)
@@ -55,5 +57,13 @@ library(rgdal)
 p <- spTransform(subarea, "+proj=laea +lon_0=147 +lat_0=-90 +ellps=WGS84 +no_defs")
 plot(p, col = "darkgrey")
 
+
+```
+
+```{r s48}
+SOmap::SOmap()
+for (i in seq(48.1, 48.6, by = 0.1)) {
+  SOplot(division(i))
+}
 
 ```

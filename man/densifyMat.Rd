@@ -20,4 +20,3 @@ This function takes a matrix of coordinates in longlat that define a pathy, and 
 \details{
 The function assumes each segment is a great circle, on the Vincenty ellipsoid \code{\link[geosphere]{distVincentyEllipsoid}}.
 }
-
